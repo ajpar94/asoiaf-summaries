@@ -1,0 +1,20 @@
+\input{input/settings}
+
+\title{<TITLE>}
+\author{<AUTHOR>}
+\newcommand\bookxof{<BOOK X OF>}
+\newcommand\bookseries{<BOOK SERIES>}
+\newcommand\theyear{<YEAR>}
+
+\begin{document}
+\includepdf{input/Cover.pdf}
+\input{input/titlepage}
+\pagenumbering{gobble}
+\input{input/copyright}
+\includepdf[pages={1-}]{input/Maps.pdf}
+\part*{\thetitle}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{input/chapters}
+\input{input/appendix}
+\end{document}

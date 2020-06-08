@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\setlistdepth{9}
+\renewlist{itemize}{itemize}{9}
+\setlist[itemize]{noitemsep}
+\setlist[itemize]{nolistsep}
+\setlist[itemize]{label=$\triangleright$}
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=$\circ$}
+\setlist[itemize,3]{label=$\ast$}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\chead{\includegraphics[width=\textwidth]{input/ornament.png}}
+
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{38}{47}}
+\setlength{\@fptop}{0pt}
+\let\origps@plain\ps@plain
+\renewcommand\part{%
+   \if@openright
+     \cleardoublepage
+   \else
+     \clearpage
+   \fi
+   \thispagestyle{empty}%
+   \if@twocolumn
+     \onecolumn
+     \@tempswatrue
+   \else
+     \@tempswafalse
+   \fi
+   \null\vfil
+   \secdef\@part\@spart}
+\makeatother 
